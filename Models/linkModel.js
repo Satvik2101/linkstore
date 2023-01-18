@@ -4,7 +4,7 @@ const linkSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
       trim: true,
     },
     subjectCode: {
@@ -13,7 +13,7 @@ const linkSchema = new mongoose.Schema(
     },
     url: {
       type: String,
-      required: true,
+      // required: true,
       trim: true,
     },
     clicks: {
@@ -27,6 +27,5 @@ const linkSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-const Link = mongoose.models.Link || mongoose.model("Link", linkSchema);
-
-module.exports = Link;
+const Links = mongoose.models.link || mongoose.model("link", linkSchema);
+module.exports = Links;
